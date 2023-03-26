@@ -82,10 +82,10 @@ public class Vehiculo {
 	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
-	public double getPeso() {
+	public int getPeso() {
 		return peso;
 	}
-	public void setPeso(double peso) {
+	public void setPeso(int peso) {
 		this.peso = peso;
 	}
 	public String getTraccion() {
