@@ -64,10 +64,10 @@ public class Vehiculo {
 	public void setPuertas(int puertas) {
 		this.puertas = puertas;
 	}
-	public double getVelocidadMaxima() {
+	public int getVelocidadMaxima() {
 		return velocidadMaxima;
 	}
-	public void setVelocidadMaxima(double velocidadMaxima) {
+	public void setVelocidadMaxima(int velocidadMaxima) {
 		this.velocidadMaxima = velocidadMaxima;
 	}
 	public String getNombre() {
@@ -76,10 +76,10 @@ public class Vehiculo {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public double getPrecio() {
+	public int getPrecio() {
 		return precio;
 	}
-	public void setPrecio(double precio) {
+	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
 	public double getPeso() {
