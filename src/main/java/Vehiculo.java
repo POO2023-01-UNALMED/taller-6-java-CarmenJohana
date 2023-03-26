@@ -6,26 +6,26 @@ public class Vehiculo {
 	private static ArrayList<Camioneta> camionetas=new ArrayList <Camioneta>();
 	private static ArrayList<Camion> camiones= new ArrayList<Camion>();
 	private static ArrayList<Automovil> automoviles=new ArrayList<Automovil>();
-	
-	
+
+
 	private String placa;
 	private int puertas;
-	private double velocidadMaxima;
+	private int velocidadMaxima;
 	private String nombre;
-	private double precio;
-	private double peso;
+	private int precio;
+	private int peso;
 	private String traccion;
 	private Fabricante fabricante;
 	private static int CantidadVehiculos;
-	
-	
+
+
 	public Vehiculo() {
-		
+
 		CantidadVehiculos++;
-		
+
 	}
-	public Vehiculo(String placa, String nombre, double precio, double peso, Fabricante fabricante) {
-		
+	public Vehiculo(String placa, String nombre, int precio, int peso, Fabricante fabricante) {
+
 		this.placa=placa;
 		this.nombre=nombre;
 		this.precio=precio;
@@ -33,19 +33,25 @@ public class Vehiculo {
 		this.fabricante=fabricante;
 		CantidadVehiculos++;
 	}
-	
-	public Vehiculo(String placa, int puertas, String nombre, double precio, double peso, Fabricante fabricante) {
-		
-		this.placa=placa;
+
+	public Vehiculo(String placa, int puertas, String nombre, int precio, int peso, Fabricante fabricante) {
+
+		this(String placa, String nombre, int precio, int peso, Fabricante fabricante);
 		this.puertas=puertas;
-		this.nombre=nombre;
-		this.precio=precio;
-		this.peso=peso;
-		this.fabricante=fabricante;
+
 		CantidadVehiculos++;
-		
+
 	}
-	
+	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
+
+		this(String placa, int puertas, String nombre, int precio, int peso, Fabricante fabricante);
+		this.velocidadMaxima=velocidadMaxima;
+		this.traccion=traccion;
+
+		CantidadVehiculos++;
+
+	}
+
 	public String getPlaca() {
 		return placa;
 	}
@@ -118,11 +124,11 @@ public class Vehiculo {
 	public static void setAutomoviles(ArrayList<Automovil> automoviles) {
 		Vehiculo.automoviles = automoviles;
 	}
-	
-	
+
+
 	public static final String vehiculosPorTipo() {
-		
+
 		return String.format("Automoviles: %d\nCamionetas: %d\nCamiones: %d",automoviles.size(),camionetas.size(),camiones.size());
-		
+
 	}
 }
