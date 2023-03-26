@@ -25,13 +25,13 @@ public class Vehiculo {
 
 	}
 	public Vehiculo(String placa, String nombre, int precio, int peso, Fabricante fabricante) {
-
+		this();
 		this.placa=placa;
 		this.nombre=nombre;
 		this.precio=precio;
 		this.peso=peso;
 		this.fabricante=fabricante;
-		CantidadVehiculos++;
+
 	}
 
 	public Vehiculo(String placa, int puertas, String nombre, int precio, int peso, Fabricante fabricante) {
@@ -39,7 +39,6 @@ public class Vehiculo {
 		this(placa, nombre, precio, peso, fabricante);
 		this.puertas=puertas;
 
-		CantidadVehiculos++;
 
 	}
 	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
@@ -48,7 +47,6 @@ public class Vehiculo {
 		this.velocidadMaxima=velocidadMaxima;
 		this.traccion=traccion;
 
-		CantidadVehiculos++;
 
 	}
 
